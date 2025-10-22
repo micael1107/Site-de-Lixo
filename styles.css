@@ -1,0 +1,696 @@
+/* --- RESET E TIPOGRAFIA --- */
+body {
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef; 
+    color: #343a40; 
+    line-height: 1.6;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* --- ESTILO DO CABEÇALHO e NAVEGAÇÃO --- */
+header {
+    background: linear-gradient(135deg, #008000 0%, #38b000 100%);
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    position: relative; 
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8em;
+    font-weight: 700; 
+    margin: 0;
+    display: flex; 
+    align-items: center;
+}
+
+/* ESTILO E ANIMAÇÃO DA LOGO NO HEADER */
+.header-logo {
+    height: 50px; 
+    vertical-align: middle; 
+    margin-right: 15px; 
+    animation: rotateAndStop 3s ease-out 1;
+}
+
+@keyframes rotateAndStop {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(720deg); } 
+    100% { transform: rotate(0deg); }
+}
+
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* --- ESTILO DAS SEÇÕES GERAIS E CTA --- */
+.section-card {
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #008000; 
+}
+
+.hero-section {
+    background: linear-gradient(45deg, #ccffcc 0%, #ffffff 100%); 
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    position: relative; 
+    overflow: hidden; 
+}
+
+/* ---------------------------------------------------- */
+/* >> AJUSTE DO GIF DA TERRA (MAIS VISÍVEL) << */
+/* ---------------------------------------------------- */
+.earth-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; 
+    height: 300px; 
+    opacity: 0.25; /* Aumentado para 0.25 */
+    z-index: 0;
+}
+
+.earth-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hero-section h2, .hero-section p, .btn-cta {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-cta {
+    background-color: #008000;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-cta:hover {
+    background-color: #38b000;
+    transform: scale(1.05);
+}
+
+.secondary-cta {
+    background-color: transparent;
+    border: 2px solid #008000;
+    color: #008000;
+}
+
+.secondary-cta:hover {
+    background-color: #008000;
+    color: white;
+}
+
+/* --- ESTILOS DO JOGO VISUAL (DECORAÇÃO) --- */
+.game-visual-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.visual-bin {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 5em;
+    opacity: 0.5;
+    animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.visual-trash {
+    position: absolute;
+    font-size: 2em;
+    opacity: 0.4;
+    animation: float 10s infinite linear;
+}
+
+.item-1 { top: 10%; left: 5%; animation-delay: 0s; }
+.item-2 { top: 50%; left: 80%; animation-delay: 3s; }
+.item-3 { top: 80%; left: 15%; animation-delay: 6s; }
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+
+/* --- ESTILO GUIA DE CORES --- */
+.cores-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cor-item {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.cor-item:hover {
+    transform: translateY(-5px);
+}
+
+.cor-item h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.cor-item p {
+    font-size: 0.9em;
+}
+
+.bin-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* CORES ESPECÍFICAS */
+.azul { background-color: #007bff; }
+.vermelho { background-color: #dc3545; }
+.verde { background-color: #28a745; }
+.amarelo { background-color: #ffc107; color: #343a40; text-shadow: none; }
+.marrom { background-color: #795548; }
+
+.btn-detalhe {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    align-self: flex-start;
+    transition: background-color 0.3s;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.amarelo .btn-detalhe {
+    color: #343a40;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-detalhe:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* --- ESTILO DOS CARDS GERAIS (Tipos de Lixo e Descarte Especial) --- */
+.card-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #008000;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* --- IMPACTO AMBIENTAL --- */
+.impacto-stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.stat-item span {
+    display: block;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #008000;
+}
+
+.stat-item p {
+    font-size: 1.1em;
+    color: #495057;
+}
+
+/* --- FAQ --- */
+.faq-item {
+    border-bottom: 1px solid #e9ecef;
+    padding: 15px 0;
+}
+
+.faq-question {
+    color: #008000;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.faq-answer {
+    color: #495057;
+    margin-top: 0;
+}
+
+
+/* ------------------------------------------------------------------- */
+/* ESTILOS DA GALERIA DE DESTAQUES (Lixeiras) */
+/* ------------------------------------------------------------------- */
+.galeria-container {
+    display: flex;
+    justify-content: space-between; 
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.imagem-destaque {
+    flex: 1; 
+    min-height: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.imagem-destaque:hover {
+    transform: translateY(-5px);
+}
+
+.imagem-destaque::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: 1;
+}
+
+.imagem-destaque * {
+    position: relative;
+    z-index: 2;
+}
+
+/* -------------------------------------------------------------------- */
+/* *** COLOQUE AQUI O CAMINHO DA IMAGEM 1 (Lixeira Inteligente) *** */
+/* -------------------------------------------------------------------- */
+.img-lixeira-seletiva {
+    background-image: url('imagens/lixeira\ inteligente.jpg'); 
+    background-color: #007bff; /* Fallback */
+}
+
+/* -------------------------------------------------------------------- */
+/* *** COLOQUE AQUI O CAMINHO DA IMAGEM 2 (Lixeira Comum) *** */
+/* -------------------------------------------------------------------- */
+.img-reciclado {
+    background-image: url('imagens/lixeira\ comum.jpg');
+    background-color: #28a745; /* Fallback */
+}
+
+/* ------------------------------------------------------------------- */
+/* ESTILO DO RODAPÉ */
+/* ------------------------------------------------------------------- */
+footer {
+    background-color: #495057; 
+    color: white;
+    padding: 20px 0;
+    font-size: 0.9em;
+    margin-top: 30px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.senai-credit {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    font-weight: 400; 
+}
+
+.senai-logo {
+    height: 30px; 
+    width: auto;
+    vertical-align: middle;
+}
+
+/* ------------------------------------------------------------------- */
+/* ESTILOS DO MODAL DO JOGO */
+/* ------------------------------------------------------------------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* IMPORTANTE para o confete não vazar */
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; 
+    max-width: 1000px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    max-height: 90vh; 
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover, .close-btn:focus {
+    color: #343a40;
+    text-decoration: none;
+}
+
+.game-area {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Altura fixa para a área do jogo */
+    border: 3px dashed #ccc;
+    margin-top: 20px;
+    overflow: hidden; /* Importante para a queda */
+}
+
+.trash-item {
+    position: absolute;
+    font-size: 2.5em;
+    cursor: grab;
+    z-index: 10;
+    pointer-events: auto; /* Permite arrastar */
+    transition: top 10s linear, opacity 0.5s; /* Transição de queda */
+}
+
+.trash-item:active {
+    cursor: grabbing;
+}
+
+.trash-item.dragging {
+    opacity: 0.7;
+    transform: scale(1.1);
+    transition: transform 0.2s;
+    z-index: 20;
+}
+
+.bins-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.bin {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: white;
+    cursor: default;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.bin.blue { background-color: #007bff; }
+.bin.red { background-color: #dc3545; }
+.bin.green { background-color: #28a745; }
+.bin.yellow { background-color: #ffc107; color: #343a40; }
+.bin.brown { background-color: #795548; }
+
+.bin.drag-over {
+    border: 3px solid white;
+    transform: scale(1.05);
+}
+
+#result-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    z-index: 500;
+    display: none;
+}
+
+
+/* ------------------------------------------------------------------- */
+/* FLASHES DE FEEDBACK E TRANSIÇÃO (VERDE e VERMELHO) */
+/* ------------------------------------------------------------------- */
+.flash-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Cor e opacidade padrão para o flash individual (acerto) */
+    background-color: rgba(0, 150, 0, 0.95); /* Aumentado para 95% de opacidade (mais forte) */
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s; /* Transição rápida para acerto individual */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flash de acerto individual (VERDE) */
+#green-flash.active {
+    opacity: 1; /* O flash fica ativo */
+}
+
+/* Flash de erro individual (VERMELHO - pisca rápido) */
+.flash-overlay.error-flash {
+    background-color: rgba(220, 53, 69, 0.95); /* Cor vermelha forte */
+    transition: opacity 0.1s; /* Flash muito rápido para erro */
+}
+
+/* Flash de transição de vitória/sucesso (VERDE - mais lento e forte) */
+.flash-overlay.success-transition {
+    background-color: rgba(0, 150, 0, 0.95);
+    transition: opacity 1s; /* Transição de 1 segundo (usada no JS para 2 segundos totais) */
+}
+
+/* Flash de transição de falha (VERMELHO - mais lento e forte) */
+.flash-overlay.fail-transition {
+    background-color: rgba(220, 53, 69, 0.95); /* Cor vermelha forte */
+    transition: opacity 1s; /* Transição de 1 segundo (usada no JS para 2 segundos totais) */
+}
+
+.flash-logo {
+    font-size: 8em;
+    animation: spin 1s linear infinite; 
+    color: white;
+}
+
+.flash-logo.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ------------------------------------------------------------------- */
+/* ESTILOS DE CONFETE COM FÍSICA PARA TELA DE VITÓRIA */
+/* ------------------------------------------------------------------- */
+
+.confetti {
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    z-index: 5000;
+    opacity: 0.9;
+    
+    animation: confetti-fall 3s ease-in forwards, confetti-rotate 3s linear forwards; 
+}
+
+/* Animação de Queda (Simula gravidade e desaparecimento) */
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+    
+    100% {
+        transform: translateY(90vh) translateX(var(--vx, 0)) rotate(360deg); 
+        opacity: 0; 
+    }
+}
+
+/* Animação de Rotação */
+@keyframes confetti-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(var(--rs, 720deg)); }
+}
+
+/* Garante que o confete não vaze do modal */
+#game-modal {
+    overflow: hidden !important; 
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 992px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav ul {
+        margin-top: 10px;
+    }
+    header nav ul li {
+        margin: 0 10px;
+    }
+    .cores-container, .card-grid, .galeria-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .impacto-stats {
+        flex-direction: column;
+    }
+    .footer-content-custom {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-content-custom p {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-content {
+        width: 95%;
+        margin: 2% auto;
+    }
+    .bin {
+        width: 60px;
+        height: 60px;
+        font-size: 0.65em;
+    }
+    .trash-item {
+        font-size: 2em;
+    }
+}
